@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" 
-      class="scroll-smooth"
-      x-data="{ 
-          darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
-          mobileMenuOpen: false
-      }"
-      x-init="$watch('darkMode', val => localStorage.setItem('theme', val ? 'dark' : 'light'))"
-      :class="{ 'dark': darkMode }">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Script to set theme immediately and prevent flicker -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 
     <title>{{ $title ?? 'Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer' }}</title>
     <meta name="description" content="Portfolio of Bagas Alif Muhammad Nasution, S.Kom - Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer.">
@@ -44,7 +46,21 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-[#f8fafc] text-slate-800 dark:bg-[#0f172a] dark:text-slate-200 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-600 selection:text-white transition-colors duration-200">
+<body class="bg-[#f8fafc] text-slate-800 dark:bg-[#0f172a] dark:text-slate-200 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-600 selection:text-white transition-colors duration-200"
+      x-data="{ 
+          darkMode: document.documentElement.classList.contains('dark'),
+          mobileMenuOpen: false,
+          toggleTheme() {
+              this.darkMode = !this.darkMode;
+              if (this.darkMode) {
+                  document.documentElement.classList.add('dark');
+                  localStorage.setItem('theme', 'dark');
+              } else {
+                  document.documentElement.classList.remove('dark');
+                  localStorage.setItem('theme', 'light');
+              }
+          }
+      }">
 
     <!-- Fixed Left Sidebar: Social Links (Desktop) -->
     <div class="fixed bottom-0 left-6 lg:left-12 hidden md:flex flex-col items-center gap-6 z-40">
@@ -112,7 +128,7 @@
                     </a>
 
                     <!-- Dark/Light Theme Toggle -->
-                    <button @click="darkMode = !darkMode" 
+                    <button @click="toggleTheme()" 
                             type="button" 
                             class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors"
                             aria-label="Toggle theme">
@@ -129,7 +145,7 @@
 
                 <!-- Mobile Menu Button & Theme toggle -->
                 <div class="flex items-center gap-3 md:hidden">
-                    <button @click="darkMode = !darkMode" type="button" class="p-2 rounded-lg text-slate-600 dark:text-slate-300">
+                    <button @click="toggleTheme()" type="button" class="p-2 rounded-lg text-slate-600 dark:text-slate-300" aria-label="Toggle theme">
                         <svg x-show="darkMode" class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                         </svg>
