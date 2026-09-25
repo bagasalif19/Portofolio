@@ -75,7 +75,7 @@
         </section>
 
         <!-- SECTION 01: TENTANG SAYA -->
-        <section id="about" class="space-y-6 scroll-mt-24">
+        <section id="about" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">01.</span>
                 <span>Tentang Saya</span>
@@ -122,7 +122,7 @@
         </section>
 
         <!-- SECTION 02: PENGALAMAN KERJA -->
-        <section id="experience" class="space-y-6 scroll-mt-24">
+        <section id="experience" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">02.</span>
                 <span>Pengalaman Kerja</span>
@@ -170,7 +170,7 @@
         </section>
 
         <!-- SECTION 03: PROYEK UNGGULAN (INTERACTIVE LIST / TIMELINE) -->
-        <section id="projects" class="space-y-6 scroll-mt-24" x-data="{ expanded: null }">
+        <section id="projects" class="space-y-6 scroll-mt-24 reveal-on-scroll" x-data="{ expanded: null }">
             <div class="flex items-center justify-between gap-4">
                 <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white flex-grow">
                     <span class="text-emerald-600 dark:text-emerald-400">03.</span>
@@ -256,7 +256,7 @@
         </section>
 
         <!-- SECTION 04: PENDIDIKAN & SERTIFIKASI -->
-        <section id="education" class="space-y-6 scroll-mt-24">
+        <section id="education" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">04.</span>
                 <span>Pendidikan & Sertifikasi</span>
@@ -330,7 +330,7 @@
         </section>
 
         <!-- SECTION 05: KONTAK -->
-        <section id="contact" class="py-8 scroll-mt-24 space-y-8" x-data="{ openDirectForm: false }">
+        <section id="contact" class="py-8 scroll-mt-24 space-y-8 reveal-on-scroll" x-data="{ openDirectForm: false }">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">05.</span>
                 <span>Kontak & Kolaborasi</span>
