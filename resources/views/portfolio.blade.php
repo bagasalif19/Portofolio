@@ -64,10 +64,13 @@
                 </div>
 
                 <!-- Avatar Card -->
-                <div class="shrink-0">
-                    <div class="relative p-1.5 rounded-2xl bg-gradient-to-b from-emerald-500/40 via-slate-200 to-slate-300 dark:via-slate-800 dark:to-slate-900 shadow-lg">
-                        <div class="w-36 sm:w-44 aspect-[3/4] rounded-xl overflow-hidden bg-slate-900 border border-white/40 dark:border-slate-700/50">
-                            <img src="{{ $profile['avatar'] }}" alt="{{ $profile['name'] }}" class="w-full h-full object-cover object-top">
+                <div class="shrink-0 group">
+                    <div class="relative p-1.5 rounded-2xl bg-gradient-to-b from-emerald-500/50 via-slate-200 to-slate-300 dark:via-slate-800 dark:to-slate-900 shadow-xl transition-all duration-300 group-hover:shadow-emerald-500/15">
+                        <div class="w-40 sm:w-48 aspect-[3/4] rounded-xl overflow-hidden relative border border-slate-200 dark:border-slate-700/60 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200 dark:from-[#0f172a] dark:via-[#090f1d] dark:to-[#050912]">
+                            <!-- Ambient Lighting Spotlight -->
+                            <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-44 h-44 rounded-full bg-emerald-500/15 blur-2xl pointer-events-none"></div>
+                            <!-- Cutout Portrait -->
+                            <img src="{{ $profile['avatar'] }}" alt="{{ $profile['name'] }}" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 relative z-10">
                         </div>
                     </div>
                 </div>

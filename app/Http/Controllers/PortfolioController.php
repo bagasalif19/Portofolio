@@ -29,7 +29,7 @@ class PortfolioController extends Controller
             'linkedin' => 'https://www.linkedin.com/in/bagasalif',
             'github' => 'https://github.com/bagasalif19',
             'resume' => asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf'),
-            'avatar' => asset('images/avatar.jpg'),
+            'avatar' => asset('images/bagas_alif_transparent.png'),
             'bnsp' => 'BNSP Certified: Pengembang Web Pratama (No: 62090 2513 3 0169001 2026)',
         ];
 
