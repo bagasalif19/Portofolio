@@ -12,8 +12,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'Bagas Alif Muhammad Nasution | Portfolio' }}</title>
-    <meta name="description" content="Personal portfolio of Bagas Alif Muhammad Nasution, S.Kom - Full-Stack Developer & Web Programmer specializing in Laravel & Tailwind CSS.">
+    <title>{{ $title ?? 'Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer' }}</title>
+    <meta name="description" content="Portfolio of Bagas Alif Muhammad Nasution, S.Kom - Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer.">
+    <meta name="author" content="Bagas Alif Muhammad Nasution">
+
+    <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bagasalif.my.id">
+    <meta property="og:title" content="Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer specializing in Laravel, PHP, and modern web applications.">
+    <meta property="og:image" content="{{ asset('images/bagas_alif.jpg') }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer.">
+    <meta name="twitter:image" content="{{ asset('images/bagas_alif.jpg') }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/logo-bam.png') }}?v=2">
@@ -90,8 +104,11 @@
                     <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontak</a>
 
                     <!-- Resume Button -->
-                    <a href="#contact" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold">
-                        CV / Resume
+                    <a href="{{ asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf') }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        <span>CV / Resume</span>
                     </a>
 
                     <!-- Dark/Light Theme Toggle -->
@@ -142,8 +159,8 @@
             <a @click="mobileMenuOpen = false" href="#education" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Pendidikan & Sertifikasi</a>
             <a @click="mobileMenuOpen = false" href="#contact" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Kontak</a>
             <div class="pt-2">
-                <a @click="mobileMenuOpen = false" href="#contact" class="block text-center py-2.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 font-semibold">
-                    CV / Resume
+                <a @click="mobileMenuOpen = false" href="{{ asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf') }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="block text-center py-2.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 font-semibold">
+                    📥 Unduh CV / Resume
                 </a>
             </div>
         </div>

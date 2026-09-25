@@ -27,7 +27,8 @@ class PortfolioController extends Controller
             'whatsapp' => 'https://wa.me/6281269907315',
             'email' => 'bagasalif19@gmail.com',
             'linkedin' => 'https://www.linkedin.com/in/bagasalif',
-            'github' => 'https://github.com',
+            'github' => 'https://github.com/bagasalif19',
+            'resume' => asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf'),
             'avatar' => asset('images/avatar.jpg'),
             'bnsp' => 'BNSP Certified: Pengembang Web Pratama (No: 62090 2513 3 0169001 2026)',
         ];

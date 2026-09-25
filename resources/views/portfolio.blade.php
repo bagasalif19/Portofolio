@@ -42,16 +42,22 @@
 
                     <!-- Action CTAs -->
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-3">
-                        <a href="#projects" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-2">
+                        <a href="{{ $profile['resume'] }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-2 group">
+                            <svg class="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <span>Unduh CV / Resume</span>
+                        </a>
+                        <a href="#projects" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 text-slate-700 dark:text-slate-200 font-mono text-xs font-medium transition-all flex items-center gap-2">
                             <span>Jelajahi Proyek</span>
                             <span>↓</span>
                         </a>
-                        <a href="{{ $profile['whatsapp'] }}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 text-slate-700 dark:text-slate-200 font-mono text-xs font-medium transition-all flex items-center gap-2">
-                            <span>Hubungi via WhatsApp</span>
+                        <a href="{{ $profile['whatsapp'] }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-mono text-xs transition-colors flex items-center gap-1.5">
+                            <span>WhatsApp</span>
                             <span>↗</span>
                         </a>
                         <a href="mailto:{{ $profile['email'] }}" class="px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-mono text-xs transition-colors">
-                            Kirim Email
+                            Email
                         </a>
                     </div>
 
