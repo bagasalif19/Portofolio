@@ -96,8 +96,8 @@
         <!-- Top Header (Logo BAM & Label) -->
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-                <div class="h-8 w-8 rounded-lg bg-slate-900 border border-slate-800 p-1 flex items-center justify-center">
-                    <img src="{{ asset('images/logo-bam.png') }}" alt="BAM Logo" class="h-full w-full object-contain">
+                <div class="h-7 w-7 flex items-center justify-center">
+                    <img src="{{ asset('images/logo-bam-white.png') }}" alt="BAM Logo" class="h-full w-full object-contain">
                 </div>
                 <span class="font-mono text-xs font-bold tracking-wider text-slate-300">BAM</span>
             </div>
@@ -167,9 +167,10 @@
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Brand Monogram (BAM Logo) -->
-                <a href="#hero" class="group flex items-center gap-2.5 font-mono text-base tracking-tight hover:opacity-90 transition-opacity">
-                    <div class="h-8 w-8 sm:h-9 sm:w-9 rounded-lg overflow-hidden bg-white dark:bg-slate-850 p-1 border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
-                        <img src="{{ asset('images/logo-bam.png') }}" alt="BAM Logo" class="h-full w-full object-contain">
+                <a href="#hero" class="group flex items-center gap-3 font-mono text-base tracking-tight hover:opacity-90 transition-opacity">
+                    <div class="h-7 w-7 sm:h-8 sm:w-8 shrink-0 flex items-center justify-center">
+                        <img src="{{ asset('images/logo-bam-white.png') }}" alt="BAM Logo" class="h-full w-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-110">
+                        <img src="{{ asset('images/logo-bam-dark.png') }}" alt="BAM Logo" class="h-full w-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-110">
                     </div>
                     <div class="flex items-center gap-1 font-bold text-slate-900 dark:text-white">
                         <span>bagas.alif</span>

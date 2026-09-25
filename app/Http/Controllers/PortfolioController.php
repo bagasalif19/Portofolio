@@ -64,7 +64,7 @@ class PortfolioController extends Controller
                     'Menjalankan dan memelihara infrastruktur dan Sistem teknologi informasi (TI) yang sudah ada untuk memastikan ketersediaan dan kinerja yang optimal.',
                     'Memastikan pengelolaan data yang efektif, termasuk pemeliharaan database, untuk mendukung operasional sistem inforrnasi.',
                 ],
-                'tags' => ['#Laravel', '#TailwindCSS', '#PHP', '#MySQL', '#GovTech', '#DesaDigital'],
+                'tags' => ['#Laravel', '#TailwindCSS', '#PHP', '#MySQL', '#GovTech', '#Bootstrap'],
             ],
         ];
 
